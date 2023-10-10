@@ -8,5 +8,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         coordinateSystem.run(scanner);
     }
-
 }
+
+
+
+
+
+
+
