@@ -11,32 +11,24 @@ public class CoordinateSystem {
         System.out.println("Podaj punkt y");
         int y = scanner.nextInt();
         Point point = new Point(x, y);
+        checkQuarter(point, x, y);
+    }
+
+    private void checkQuarter(Point point, int x, int y) {
         if (onCenter(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży w środku układu współrzędnych");
-        }
-
-        if (onX(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży na osi X");
-        }
-
-        if (onY(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży na osi Y");
-        }
-
-        if (firstQuarter(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży w I ćwiartce układu współrzędnych");
-        }
-
-        if (secondQuarter(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży w II ćwiartce układu współrzędnych");
-        }
-
-        if (thirdQuarter(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży w III ćwiartce układu współrzędnych");
-        }
-
-        if (fourthQuarter(point)) {
-            System.out.println("Punkt (" + x + "," + y + ") " + " leży w IV ćwiartce układu współrzędnych");
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży na środku układu współrzędnych");
+        } else if (onX(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży na osi X");
+        } else if (onY(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży na osi Y");
+        } else if (firstQuarter(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży w I ćwiartce układu współrzędnych");
+        } else if (secondQuarter(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży w II ćwiartce układu współrzędnych");
+        } else if (thirdQuarter(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży w III ćwiartce układu współrzędnych");
+        } else if (fourthQuarter(point)) {
+            System.out.println("Punkt (" + x + ", " + y + ") " + "leży w IV ćwiartce układu współrzędnych");
         }
     }
 
